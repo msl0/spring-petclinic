@@ -7,6 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 WORKDIR /usr/src/
 RUN git clone https://github.com/elastic/spring-petclinic.git
 WORKDIR /usr/src/spring-petclinic/address_resolver/src
+RUN pip install setuptools==45
 RUN pip install gunicorn json-logging-py
 RUN pip install --no-cache-dir -r requirements.txt
 
